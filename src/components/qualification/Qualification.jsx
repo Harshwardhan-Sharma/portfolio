@@ -5,8 +5,14 @@ const Qualification = () => {
 
     const [toggleState, setToggleState] = useState(1);
 
+    const [toggleCard, setToggleCard] = useState(0);
+
     const toggleTab = (index) => {
         setToggleState(index);
+    }
+
+    const toggleCardTab = (index) => {
+        setToggleCard(index);
     }
 
   return (
@@ -41,91 +47,215 @@ const Qualification = () => {
 
             <div className="qualification__sections">
                     <div className={toggleState === 1 ? "qualification__content qualification__content-active" : "qualification__content"}>
-                        <div className="qualification__data">
-                            <div>
-                                <h3 className="qualification__title">Bachelor in computer science and engineering</h3>
-                                <span className="qualification__subtitle">Engineering College Bikaner </span>
-                                <div className="qualification__calender">
-                                    <i class="uil uil-calendar-alt"> </i>
-                                    2015 - present
-                                </div>
-                            </div>
+                       <div className="qualification__sections-container sections-container grid">
 
-                            <div>
-                                <span className="qualification__rounder"></span>
-                                <span className="qualification__line"></span>
-                            </div>
-                    </div>
+                       <div className="qualification__card-content">
 
-                    <div className="qualification__data">
-                        <div></div>
+    <div>
+      <i className="uil uil-browser qualification__card-icon"></i>
+   <h3 className="qualification__card-title">Web <br/> Developer</h3>
+  </div>
 
-                        <div>
-                            <span className="qualification__rounder"></span>
-                            <span className="qualification__line"></span>
-                        </div>
+  <span className="qualification__card-button" onClick={()=>{toggleCardTab(1)}}>View More <i className="uil uil-arrow-right qualification__card-button-icon"></i></span>
 
-                            <div>
-                                <h3 className="qualification__title">Master in Computer Engineering</h3>
-                                <span className="qualification__subtitle">Harvard University </span>
-                                <div className="qualification__calender">
-                                    <i className="uil uil-calendar-alt"> </i>
-                                      2015 - present
-                                </div>
-                            </div>
-                    </div>
-                </div> 
+
+  <div className={toggleCard === 1 ? "qualification__card-modal active-modal" : "qualification__card-modal"}>
+<div className="qualification__card-modal-content">
+
+<i onClick={()=>{toggleCardTab(0)}} className="uil uil-times qualification__card-modal-close"></i>
+
+<h3 className="qualification__card-modal-title">Web Developer</h3>
+
+<p className="qualification__card-modal-description">Crafting dynamic applications and delivering effective solutions.
+</p>
+
+<ul className="qualification__card-modal-services grid">
+<li className="qualification__card-modal-service">
+<i className="uil uil-check-circle qualification__card-modal-icon"></i>
+<p className="qualification__card-modal-info">
+I design intuitive, engaging web pages.
+</p>
+</li>
+
+<li className="qualification__card-modal-service">
+<i className="uil uil-check-circle qualification__card-modal-icon"></i>
+<p className="qualification__card-modal-info">I optimize your brand’s online impact.
+</p>
+</li>
+</ul>
+</div>
+ </div>
+
+                       </div>  
+
+                       <div className="qualification__card-content">
+
+<div>
+  <i className="uil uil-browser qualification__card-icon"></i>
+   <h3 className="qualification__card-title">app <br/> Developer</h3>
+  </div>
+
+  <span className="qualification__card-button" onClick={()=>{toggleCardTab(2)}}>View More <i className="uil uil-arrow-right qualification__card-button-icon"></i></span>
+
+
+  <div className={toggleCard === 2 ? "qualification__card-modal active-modal" : "qualification__card-modal"}>
+<div className="qualification__card-modal-content">
+
+<i onClick={()=>{toggleCardTab(0)}} className="uil uil-times qualification__card-modal-close"></i>
+
+<h3 className="qualification__card-modal-title">app Developer</h3>
+
+<p className="qualification__card-modal-description">Crafting dynamic applications and delivering effective solutions.
+</p>
+
+<ul className="qualification__card-modal-services grid">
+<li className="qualification__card-modal-service">
+<i className="uil uil-check-circle qualification__card-modal-icon"></i>
+<p className="qualification__card-modal-info">
+I design intuitive, engaging web pages.
+</p>
+</li>
+
+<li className="qualification__card-modal-service">
+<i className="uil uil-check-circle qualification__card-modal-icon"></i>
+<p className="qualification__card-modal-info">I optimize your brand’s online impact.
+</p>
+</li>
+</ul>
+</div>
+ </div>
+
+                       </div> 
+
+
+                       <div className="qualification__card-content">
+
+<div>
+  <i className="uil uil-browser qualification__card-icon"></i>
+   <h3 className="qualification__card-title">ui <br/> Developer</h3>
+  </div>
+
+  <span className="qualification__card-button" onClick={()=>{toggleCardTab(3)}}>View More <i className="uil uil-arrow-right qualification__card-button-icon"></i></span>
+
+
+  <div className={toggleCard === 3 ? "qualification__card-modal active-modal" : "qualification__card-modal"}>
+<div className="qualification__card-modal-content">
+
+<i onClick={()=>{toggleCardTab(0)}} className="uil uil-times qualification__card-modal-close"></i>
+
+<h3 className="qualification__card-modal-title">ui Developer</h3>
+
+<p className="qualification__card-modal-description">Crafting dynamic applications and delivering effective solutions.
+</p>
+
+<ul className="qualification__card-modal-services grid">
+<li className="qualification__card-modal-service">
+<i className="uil uil-check-circle qualification__card-modal-icon"></i>
+<p className="qualification__card-modal-info">
+I design intuitive, engaging web pages.
+</p>
+</li>
+
+<li className="qualification__card-modal-service">
+<i className="uil uil-check-circle qualification__card-modal-icon"></i>
+<p className="qualification__card-modal-info">I optimize your brand’s online impact.
+</p>
+</li>
+</ul>
+</div>
+ </div>
+
+                       </div> 
+
+                       </div>
+
+                    </div> 
 
                 <div className={toggleState === 2 ? "qualification__content qualification__content-active" : "qualification__content"}>
-                        <div className="qualification__data">
-                            <div>
-                                <h3 className="qualification__title">Master in Computer Engineering</h3>
-                                <span className="qualification__subtitle">Harvard University </span>
-                                <div className="qualification__calender">
-                                    <i className="uil uil-calendar-alt"> </i>
-                                    2015 - present
-                                </div>
-                            </div>
+                <div className="qualification__sections-container sections-container grid">
 
-                            <div>
-                                <span className="qualification__rounder"></span>
-                                <span className="qualification__line"></span>
-                            </div>
-                    </div>
+                <div className="qualification__card-content">
 
-                    <div className="qualification__data">
-                        <div></div>
+<div>
+  <i className="uil uil-browser qualification__card-icon"></i>
+<h3 className="qualification__card-title">Web <br/> Developer</h3>
+</div>
 
-                        <div>
-                            <span className="qualification__rounder"></span>
-                            <span className="qualification__line"></span>
-                        </div>
+<span className="qualification__card-button" onClick={()=>{toggleCardTab(1)}}>View More <i className="uil uil-arrow-right qualification__card-button-icon"></i></span>
 
-                            <div>
-                                <h3 className="qualification__title">Master in Computer Engineering</h3>
-                                <span className="qualification__subtitle">Harvard University </span>
-                                <div className="qualification__calender">
-                                    <i className="uil uil-calendar-alt"> </i>
-                                    2015 - present
-                                </div>
-                            </div>
-                    </div>
 
-                    <div className="qualification__data">
-                            <div>
-                                <h3 className="qualification__title">Master in Computer Engineering</h3>
-                                <span className="qualification__subtitle">Harvard University </span>
-                                <div className="qualification__calender">
-                                    <i className="uil uil-calendar-alt"> </i>
-                                    2015 - present
-                                </div>
-                            </div>
+<div className={toggleCard === 1 ? "qualification__card-modal active-modal" : "qualification__card-modal"}>
+<div className="qualification__card-modal-content">
 
-                            <div>
-                                <span className="qualification__rounder"></span>
-                                <span className="qualification__line"></span>
-                            </div>
-                    </div>
+<i onClick={()=>{toggleCardTab(0)}} className="uil uil-times qualification__card-modal-close"></i>
+
+<h3 className="qualification__card-modal-title">Web Developer</h3>
+
+<p className="qualification__card-modal-description">Crafting dynamic applications and delivering effective solutions.
+</p>
+
+<ul className="qualification__card-modal-services grid">
+<li className="qualification__card-modal-service">
+<i className="uil uil-check-circle qualification__card-modal-icon"></i>
+<p className="qualification__card-modal-info">
+I design intuitive, engaging web pages.
+</p>
+</li>
+
+<li className="qualification__card-modal-service">
+<i className="uil uil-check-circle qualification__card-modal-icon"></i>
+<p className="qualification__card-modal-info">I optimize your brand’s online impact.
+</p>
+</li>
+</ul>
+</div>
+</div>
+
+                   </div> 
+
+                   <div className="qualification__card-content">
+
+<div>
+  <i className="uil uil-browser qualification__card-icon"></i>
+   <h3 className="qualification__card-title">app <br/> Developer</h3>
+  </div>
+
+  <span className="qualification__card-button" onClick={()=>{toggleCardTab(2)}}>View More <i className="uil uil-arrow-right qualification__card-button-icon"></i></span>
+
+
+  <div className={toggleCard === 2 ? "qualification__card-modal active-modal" : "qualification__card-modal"}>
+<div className="qualification__card-modal-content">
+
+<i onClick={()=>{toggleCardTab(0)}} className="uil uil-times qualification__card-modal-close"></i>
+
+<h3 className="qualification__card-modal-title">app Developer</h3>
+
+<p className="qualification__card-modal-description">Crafting dynamic applications and delivering effective solutions.
+</p>
+
+<ul className="qualification__card-modal-services grid">
+<li className="qualification__card-modal-service">
+<i className="uil uil-check-circle qualification__card-modal-icon"></i>
+<p className="qualification__card-modal-info">
+I design intuitive, engaging web pages.
+</p>
+</li>
+
+<li className="qualification__card-modal-service">
+<i className="uil uil-check-circle qualification__card-modal-icon"></i>
+<p className="qualification__card-modal-info">I optimize your brand’s online impact.
+</p>
+</li>
+</ul>
+</div>
+ </div>
+
+                       </div>
+
+                     
+
+
+                </div>
                     
                 </div> 
             </div>
