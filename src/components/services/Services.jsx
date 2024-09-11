@@ -17,8 +17,8 @@ const Services = () => {
     <div className="services__container container grid">
       <div className="services__content">
         <div>
-          <i className="uil uil-web-grid services__icon"></i>
-          <h3 className="services__title">Product <br/> Designer</h3>
+          <i className="uil uil-browser services__icon"></i>
+          <h3 className="services__title">Web <br/> Developer</h3>
         </div>
 
         <span className="services__button" onClick={()=>{toggleTab(1)}}>View More <i className="uil uil-arrow-right services__button-icon"></i></span>
@@ -28,45 +28,42 @@ const Services = () => {
 
             <i onClick={()=>{toggleTab(0)}} className="uil uil-times services__modal-close"></i>
 
-            <h3 className="services__modal-title">Product Design</h3>
+            <h3 className="services__modal-title">Web Developer</h3>
 
-            <p className="services__modal-description">
-            Service with more than 3 years of experience.Providing quality work to clients and companies.
+            <p className="services__modal-description">Crafting dynamic applications and delivering effective solutions.
             </p>
 
             <ul className="services__modal-services grid">
                 <li className="services__modal-service">
                     <i className="uil uil-check-circle services__modal-icon"></i>
                     <p className="services__modal-info">
-                    I develop the user interface.
+                      I design intuitive, engaging web pages.
+                    </p>
+                </li>
+
+                <li className="services__modal-service">
+                    <i className="uil uil-check-circle services__modal-icon"></i>
+                    <p className="services__modal-info">I optimize your brand’s online impact.
                     </p>
                 </li>
 
                 <li className="services__modal-service">
                     <i className="uil uil-check-circle services__modal-icon"></i>
                     <p className="services__modal-info">
-                    Web page development.
+                    I create engaging, user-friendly UX interactions.
+                    </p>
+                </li>
+
+                <li className="services__modal-service">
+                    <i className="uil uil-check-circle services__modal-icon"></i>
+                    <p className="services__modal-info">I provide full-spectrum design solutions.
                     </p>
                 </li>
 
                 <li className="services__modal-service">
                     <i className="uil uil-check-circle services__modal-icon"></i>
                     <p className="services__modal-info">
-                    I create ux element interactions.
-                    </p>
-                </li>
-
-                <li className="services__modal-service">
-                    <i className="uil uil-check-circle services__modal-icon"></i>
-                    <p className="services__modal-info">
-                    I position your company brand.
-                    </p>
-                </li>
-
-                <li className="services__modal-service">
-                    <i className="uil uil-check-circle services__modal-icon"></i>
-                    <p className="services__modal-info">
-                    I design digital prototypes.
+                    I design web solutions aligned with branding.
                     </p>
                 </li>
             </ul>
@@ -77,7 +74,7 @@ const Services = () => {
       <div className="services__content">
         <div>
           <i className="uil uil-arrow services__icon"></i>
-          <h3 className="services__title">Ui/Ux <br/> Designer</h3>
+          <h3 className="services__title">UI/UX <br/> Designer</h3>
         </div>
 
         <span className="services__button"
@@ -93,43 +90,41 @@ const Services = () => {
 
             <h3 className="services__modal-title">UI/UX Developer</h3>
 
-            <p className="services__modal-description">
-            Service with more than 3 years of experience.Providing quality work to clients and companies.
+            <p className="services__modal-description">Crafting intuitive interfaces and designing effective user experiences.
             </p>
 
             <ul className="services__modal-services grid">
                 <li className="services__modal-service">
                     <i className="uil uil-check-circle services__modal-icon"></i>
                     <p className="services__modal-info">
-                    I develop the user interface.
+                    Crafting intuitive user interfaces.
+                    </p>
+                </li>
+
+                <li className="services__modal-service">
+                    <i className="uil uil-check-circle services__modal-icon"></i>
+                    <p className="services__modal-info">Specializing in comprehensive application development.
                     </p>
                 </li>
 
                 <li className="services__modal-service">
                     <i className="uil uil-check-circle services__modal-icon"></i>
                     <p className="services__modal-info">
-                    Web page development.
+                    Designing engaging UX element interactions.
                     </p>
                 </li>
 
                 <li className="services__modal-service">
                     <i className="uil uil-check-circle services__modal-icon"></i>
                     <p className="services__modal-info">
-                    I create ux element interactions.
+                    Positioning brands for digital impact.
                     </p>
                 </li>
 
                 <li className="services__modal-service">
                     <i className="uil uil-check-circle services__modal-icon"></i>
                     <p className="services__modal-info">
-                    I position your company brand.
-                    </p>
-                </li>
-
-                <li className="services__modal-service">
-                    <i className="uil uil-check-circle services__modal-icon"></i>
-                    <p className="services__modal-info">
-                    I design digital prototypes.
+                    Creating design mockups for Clients.
                     </p>
                 </li>
             </ul>
@@ -139,8 +134,8 @@ const Services = () => {
 
       <div className="services__content">
         <div>
-          <i className="uil uil-edit services__icon"></i>
-          <h3 className="services__title">Visual <br/> Designer</h3>
+          <i className="uil uil-mobile-android services__icon"></i>
+          <h3 className="services__title">Android <br/> Developer</h3>
         </div>
 
         <span className="services__button"
@@ -154,45 +149,42 @@ const Services = () => {
             onClick={()=>{toggleTab(0)}}
             ></i>
 
-            <h3 className="services__modal-title">Visual Designer</h3>
+            <h3 className="services__modal-title">Android Developer</h3>
 
-            <p className="services__modal-description">
-            Service with more than 3 years of experience.Providing quality work to clients and companies.
+            <p className="services__modal-description">Crafting robust, user-friendly apps with foundational skills.
             </p>
 
             <ul className="services__modal-services grid">
                 <li className="services__modal-service">
                     <i className="uil uil-check-circle services__modal-icon"></i>
                     <p className="services__modal-info">
-                    I develop the user interface.
+                    Designing intuitive Android user interfaces.
                     </p>
                 </li>
 
                 <li className="services__modal-service">
                     <i className="uil uil-check-circle services__modal-icon"></i>
                     <p className="services__modal-info">
-                    Web page development.
+                      Expert in Android development and integration.
                     </p>
                 </li>
 
                 <li className="services__modal-service">
                     <i className="uil uil-check-circle services__modal-icon"></i>
                     <p className="services__modal-info">
-                    I create ux element interactions.
+                    Crafting engaging UX for Android.
                     </p>
                 </li>
 
                 <li className="services__modal-service">
                     <i className="uil uil-check-circle services__modal-icon"></i>
-                    <p className="services__modal-info">
-                    I position your company brand.
+                    <p className="services__modal-info">Positioning your app’s brand effectively.
                     </p>
                 </li>
 
                 <li className="services__modal-service">
                     <i className="uil uil-check-circle services__modal-icon"></i>
-                    <p className="services__modal-info">
-                    I design digital prototypes.
+                    <p className="services__modal-info">Designing mockups for Android apps.
                     </p>
                 </li>
             </ul>

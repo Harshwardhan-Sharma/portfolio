@@ -162,4 +162,8 @@
     .services__content {
         padding-right: 6rem;
     }
+
+    .services__modal-info {
+        font-size: var(--smaller-font-size);
+    }
 }
