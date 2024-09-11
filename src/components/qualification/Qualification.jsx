@@ -43,8 +43,8 @@ const Qualification = () => {
                     <div className={toggleState === 1 ? "qualification__content qualification__content-active" : "qualification__content"}>
                         <div className="qualification__data">
                             <div>
-                                <h3 className="qualification__title">Master in Computer Engineering</h3>
-                                <span className="qualification__subtitle">Harvard University </span>
+                                <h3 className="qualification__title">Bachelor in computer science and engineering</h3>
+                                <span className="qualification__subtitle">Engineering College Bikaner </span>
                                 <div className="qualification__calender">
                                     <i class="uil uil-calendar-alt"> </i>
                                     2015 - present
@@ -71,40 +71,6 @@ const Qualification = () => {
                                 <div className="qualification__calender">
                                     <i className="uil uil-calendar-alt"> </i>
                                       2015 - present
-                                </div>
-                            </div>
-                    </div>
-
-                    <div className="qualification__data">
-                            <div>
-                                <h3 className="qualification__title">Master in Computer Engineering</h3>
-                                <span className="qualification__subtitle">Harvard University </span>
-                                <div className="qualification__calender">
-                                    <i className="uil uil-calendar-alt"> </i>
-                                    2015 - present
-                                </div>
-                            </div>
-
-                            <div>
-                                <span className="qualification__rounder"></span>
-                                <span className="qualification__line"></span>
-                            </div>
-                    </div>                   
-
-                    <div className="qualification__data">
-                        <div></div>
-
-                        <div>
-                            <span className="qualification__rounder"></span>
-                            <span className="qualification__line"></span>
-                        </div>
-
-                            <div>
-                                <h3 className="qualification__title">Master in Computer Engineering</h3>
-                                <span className="qualification__subtitle">Harvard University </span>
-                                <div className="qualification__calender">
-                                    <i className="uil uil-calendar-alt"> </i>
-                                    2015 - present
                                 </div>
                             </div>
                     </div>
