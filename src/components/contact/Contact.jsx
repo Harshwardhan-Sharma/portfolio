@@ -10,23 +10,35 @@ const Contact = () => {
     const form = useRef();
 
     const sendEmail = (e) => {
-        e.preventDefault();
-    
+      e.preventDefault();
+
+      const nameInput = document.getElementById('myNameInput');
+      const emailInput = document.getElementById('myEmailInput');
+      const messageInput = document.getElementById('myMessageInput');
+
+      const nameInputValue = nameInput.value;
+      const emailInputValue = emailInput.value;
+      const messageInputValue = messageInput.value;
+  
+      if (nameInputValue === '' || emailInputValue === '' || messageInputValue === '') {
+        toast.error('Please fill in all fields!');
+      } else {
         emailjs
-          .sendForm('service_tkupxmf', 'template_r688tfp', form.current, {
-            publicKey: '2ktaZ2CfkRdtWtP5r',
-          }).then(
-            () => {
-              toast.success('Email sent successfully!');
-            },
-            (error) => {
-              toast.error(
-                'The email service is temporarily unavailable. Please contact me directly on lqgQj@example.com',
-              );
-            },
-          );
-          e.target.reset();
-      };
+        .sendForm('service_tkupxmf', 'template_r688tfp', form.current, {
+          publicKey: '2ktaZ2CfkRdtWtP5r',
+        }).then(
+          () => {
+            toast.success('Email sent successfully!');
+          },
+          (error) => {
+            toast.error(
+              'The email service is temporarily unavailable. Please contact me directly on lqgQj@example.com',
+            );
+          },
+        );
+        e.target.reset();
+      }
+    };
 
   return (
     <section className="contact section" id="contact">
@@ -85,18 +97,18 @@ const Contact = () => {
           <form className="contact__form" ref={form} onSubmit={sendEmail}>
             <div className="contact__form-div">
               <label className="contact__form-tag">Name</label>
-              <input type="text" name="name" className="contact__form-input" placeholder="Insert your name" />
+              <input type="text" name="name" className="contact__form-input" placeholder="Insert your name" id='myNameInput' />
             </div>
 
             <div className="contact__form-div">
               <label className="contact__form-tag">Mail</label>
-              <input type="email" name="email" className="contact__form-input" placeholder="Insert your email" />
+              <input type="email" name="email" className="contact__form-input" placeholder="Insert your email" id='myEmailInput' />
             </div>
 
             <div className="contact__form-div contact__form-area">
               <label className="contact__form-tag">Message</label>
               <textarea name="message" cols="30" rows="10" className='contact__form-input'
-              placeholder='Write your message'></textarea>
+              placeholder='Write your message' id='myMessageInput'></textarea>
             </div>
 
             <button className="button button--flex">
