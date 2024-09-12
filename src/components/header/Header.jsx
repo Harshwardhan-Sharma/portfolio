@@ -13,12 +13,54 @@ const Header = () => {
     const [activeNav, setActiveNav] =useState(window.location.hash || '#home');
 
 
+    // scroll-based active section detection using IntersectionObserver
     useEffect(() => {
-        // Scroll-based active section detection using IntersectionObserver
+        // Function to set threshold based on screen size
+        const getThreshold = () => {
+          if (window.innerWidth > 1024) {
+            // For large screens (e.g., desktops), use a lower threshold for earlier detection
+            return 0.3; // 30% of section is visible
+          } else if (window.innerWidth > 768) {
+            // For medium screens (e.g., tablets)
+            return 0.15;
+          } else {
+            // For small screens (e.g., mobile phones), use a higher threshold
+            return 0.1;
+          }
+        };
+      
         const sections = document.querySelectorAll('section');
-    
-        const observer = new IntersectionObserver(
-          (entries) => {
+      
+        const observerOptions = {
+          threshold: getThreshold(), // Dynamic threshold based on screen size
+        };
+      
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const sectionId = `#${entry.target.id}`;
+              setActiveNav(sectionId);
+              window.history.replaceState(null, null, sectionId); // Updates the URL without reloading
+            }
+          });
+        }, observerOptions);
+      
+        sections.forEach((section) => observer.observe(section));
+      
+        // Handle URL hash change (when user directly navigates to a section)
+        const handleHashChange = () => {
+          const currentHash = window.location.hash || '#home';
+          setActiveNav(currentHash);
+        };
+        window.addEventListener('hashchange', handleHashChange);
+      
+        // Reinitialize observer when screen is resized
+        const handleResize = () => {
+          sections.forEach((section) => observer.unobserve(section)); // Clean up current observers
+          observer.disconnect(); // Disconnect the old observer
+      
+          // Recreate observer with updated threshold based on new screen size
+          const newObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
                 const sectionId = `#${entry.target.id}`;
@@ -26,25 +68,21 @@ const Header = () => {
                 window.history.replaceState(null, null, sectionId); // Updates the URL without reloading
               }
             });
-          },
-          { threshold: 0.2 } // Trigger when 20% of the section is visible
-        );
-    
-        sections.forEach((section) => observer.observe(section));
-    
-        // Handle URL hash change (when user directly navigates to a section)
-        const handleHashChange = () => {
-          const currentHash = window.location.hash || '#home';
-          setActiveNav(currentHash);
+          }, { threshold: getThreshold() });
+      
+          sections.forEach((section) => newObserver.observe(section));
         };
-        window.addEventListener('hashchange', handleHashChange);
-    
-        // Cleanup observers and event listeners
+      
+        window.addEventListener('resize', handleResize);
+      
+        // Cleanup observers and event listeners on unmount
         return () => {
           sections.forEach((section) => observer.unobserve(section));
           window.removeEventListener('hashchange', handleHashChange);
+          window.removeEventListener('resize', handleResize);
         };
       }, []);
+
 
   return (
     <header className="header">
