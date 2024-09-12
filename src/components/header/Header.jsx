@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect } from 'react'
 import './header.css'
 
 const Header = () => {
@@ -10,7 +10,41 @@ const Header = () => {
        }) 
 
     const [Toggle, showMenu] =useState(false);
-    const [activeNav, setActiveNav] =useState('#home');
+    const [activeNav, setActiveNav] =useState(window.location.hash || '#home');
+
+
+    useEffect(() => {
+        // Scroll-based active section detection using IntersectionObserver
+        const sections = document.querySelectorAll('section');
+    
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const sectionId = `#${entry.target.id}`;
+                setActiveNav(sectionId);
+                window.history.replaceState(null, null, sectionId); // Updates the URL without reloading
+              }
+            });
+          },
+          { threshold: 0.2 } // Trigger when 20% of the section is visible
+        );
+    
+        sections.forEach((section) => observer.observe(section));
+    
+        // Handle URL hash change (when user directly navigates to a section)
+        const handleHashChange = () => {
+          const currentHash = window.location.hash || '#home';
+          setActiveNav(currentHash);
+        };
+        window.addEventListener('hashchange', handleHashChange);
+    
+        // Cleanup observers and event listeners
+        return () => {
+          sections.forEach((section) => observer.unobserve(section));
+          window.removeEventListener('hashchange', handleHashChange);
+        };
+      }, []);
 
   return (
     <header className="header">
