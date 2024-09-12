@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {projectsData} from './Data';
 import {projectsNav} from './Data';
-import WorkItems from './WorkItems';
+import WorkItemsOdd from './WorkItemsOdd';
 
 const Works = () => {
 
@@ -46,7 +46,7 @@ const Works = () => {
 
     <div className="work__container container grid">
         {projects.map((item) => {
-            return <WorkItems key={item.id} item={item}/>
+            return <WorkItemsOdd key={item.id} item={item}/>
         })}
     </div>
    </div>

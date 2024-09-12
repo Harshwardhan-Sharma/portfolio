@@ -1,4 +1,5 @@
 import React from 'react'
+import { ChakraProvider } from '@chakra-ui/react'
 import "./App.css"
 import Header from './components/header/Header'
 import Home from './components/home/Home'
@@ -15,23 +16,23 @@ import { Toaster } from 'react-hot-toast'
 
 const App = () => {
   return (
-   <>
-   <Header/>
+   <ChakraProvider>
+     <Header/>
 
-   <main className='main'>
-    <Home/>
-    <About/>
-    <Skills/>
-    <Services/>
-    <Qualification/>
-    <Work/>
-    <Contact/>
-    <Toaster position='top-center'/>
-   </main>
+<main className='main'>
+ <Home/>
+ <About/>
+ <Skills/>
+ <Services/>
+ <Qualification/>
+ <Work/>
+ <Contact/>
+ <Toaster position='top-center'/>
+</main>
 
-   <Footer/>
-   <ScrollUp/>
-   </>
+<Footer/>
+<ScrollUp/>
+   </ChakraProvider>
   )
 }
 

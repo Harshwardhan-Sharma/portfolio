@@ -6,6 +6,8 @@
     margin-bottom: var(--mb-2);
 }
 
+
+
 .work__item {
     cursor: pointer;
     color: var(--title-color);
@@ -13,6 +15,7 @@
     font-weight: var(--font-medium);
     border-radius: .5rem;
     text-transform: capitalize;
+    border: 1px solid rgba(0, 0, 0, .1);
 }
 
 .work__item:hover {
