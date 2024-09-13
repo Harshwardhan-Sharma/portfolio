@@ -16,22 +16,22 @@ import { Toaster } from 'react-hot-toast'
 
 const App = () => {
   return (
-   <ChakraProvider>
+   <ChakraProvider >
      <Header/>
 
-<main className='main'>
- <Home/>
- <About/>
- <Skills/>
- <Services/>
- <Qualification/>
- <Work/>
- <Contact/>
- <Toaster position='top-center'/>
-</main>
+    <main className='main'>
+    <Home/>
+    <About/>
+    <Skills/>
+    <Services/>
+    <Qualification/>
+    <Work/>
+    <Contact/>
+    <Toaster position='top-center'/>
+    </main>
 
-<Footer/>
-<ScrollUp/>
+    <Footer/>
+    <ScrollUp/>
    </ChakraProvider>
   )
 }
