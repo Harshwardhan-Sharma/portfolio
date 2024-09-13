@@ -13,6 +13,7 @@ export const projectsData = [
       title: "Web design",
       description: "kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do",
       category: "web",
+      link : "https://github.com",
     },
     {
       id: 2,
@@ -20,6 +21,7 @@ export const projectsData = [
       title: "App movil",
       description: "kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do",
       category: "app",
+      link:"https://instagram.com",
     },
     {
       id: 3,
@@ -27,6 +29,7 @@ export const projectsData = [
       title: "Brand design",
       description: "kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do",
       category: "design",
+      link:"https://linkedin.com",
     },
     {
       id: 4,
@@ -34,6 +37,7 @@ export const projectsData = [
       title: "App movil",
       description: "kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do",
       category: "app",
+      link: "https://youtube.com",
     },
     {
       id: 5,
@@ -41,6 +45,7 @@ export const projectsData = [
       title: "Web design",
       description: "kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do kuch bhi likh do",
       category: "web",
+      link:"https://google.com",
     },
   ];
   

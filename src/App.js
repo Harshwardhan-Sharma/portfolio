@@ -16,7 +16,7 @@ import { Toaster } from 'react-hot-toast'
 
 const App = () => {
   return (
-   <ChakraProvider >
+   <ChakraProvider>
      <Header/>
 
     <main className='main'>

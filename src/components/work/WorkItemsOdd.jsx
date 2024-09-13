@@ -30,13 +30,14 @@ const WorkItemsOdd = ({item}) => {
       </Text>
     </CardBody>
 
+  <a href={item.link}>  
     <CardFooter>
       <Button 
       className='work__button'
       variant='solid'
       colorScheme='white'
       marginLeft={{lg : '50px' , md: '20px'}}
-      transition='0.2sease'
+      transition='0.2s ease'
       _hover={{bg: 'var(--title-color)' , color: 'white'}}
       textColor={'var(--text-color)'}
       border={'1px solid var(--text-color)'}
@@ -44,6 +45,7 @@ const WorkItemsOdd = ({item}) => {
         Code <i className='uil uil-github  work__button-icon'/>
       </Button>
     </CardFooter>
+  </a>
   </Stack>
 </Card>
   )
