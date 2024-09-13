@@ -80,6 +80,10 @@
     cursor: pointer;
 }
 
+.services__modal-close:hover {
+    color: var(--title-color-dark);
+}
+
 .services__modal-title,
 .services__modal-description {
     text-align: center;
