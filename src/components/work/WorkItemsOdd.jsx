@@ -9,6 +9,9 @@ const WorkItemsOdd = ({item}) => {
   direction={{ base: 'column', sm: 'row' }}
   overflow='hidden'
   variant='outline'
+  backgroundColor={'var(--container-color)'}
+  border={'transparent'}
+  color={'var(--text-color)'}
 >
 <Image
     objectFit='cover'
@@ -38,7 +41,7 @@ const WorkItemsOdd = ({item}) => {
       colorScheme='white'
       marginLeft={{lg : '50px' , md: '20px'}}
       transition='0.2s ease'
-      _hover={{bg: 'var(--title-color)' , color: 'white'}}
+      _hover={{bg: 'var(--title-color-dark)' , color: 'var(--container-color)'}}
       textColor={'var(--text-color)'}
       border={'1px solid var(--text-color)'}
       >

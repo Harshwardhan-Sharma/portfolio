@@ -9,11 +9,11 @@
   /*Color mode HSL(hue, saturation, lightness)*/
   --hue: 0;
   --sat: 0%;
-  --title-color: hsl(var(--hue), var(--sat), 20%);
-  --title-color-dark: #00b4d8;
-  --text-color: hsl(var(--hue), var(--sat), 46%);
-  --body-color: hsl(var(--hue), var(--sat), 98%);
-  --container-color: #fff;
+  --title-color: #f8f9fa;
+  --title-color-dark: #ffb703;
+  --text-color: #f8f9fa;
+  --body-color: #212529;
+  --container-color: #343a40;
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;

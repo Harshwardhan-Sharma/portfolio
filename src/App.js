@@ -1,5 +1,5 @@
 import React from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import "./App.css"
 import Header from './components/header/Header'
 import Home from './components/home/Home'
@@ -15,9 +15,23 @@ import { Toaster } from 'react-hot-toast'
 
 
 const App = () => {
+
+  const darkTheme = extendTheme({
+    styles: {
+      global: {
+        "html, body": {
+          backgroundColor: "#212529",  // Change this to the background color you need
+          color: "#f8f9fa",  // Text color
+        },
+      },
+    },
+  });
+
+
   return (
-   <ChakraProvider>
-     <Header/>
+
+  <>   
+    <Header/>
 
     <main className='main'>
     <Home/>
@@ -25,14 +39,14 @@ const App = () => {
     <Skills/>
     <Services/>
     <Qualification/>
-    <Work/>
+    <ChakraProvider theme={darkTheme}><Work/></ChakraProvider>
     <Contact/>
     <Toaster position='top-center'/>
     </main>
 
     <Footer/>
     <ScrollUp/>
-   </ChakraProvider>
+   </> 
   )
 }
 
