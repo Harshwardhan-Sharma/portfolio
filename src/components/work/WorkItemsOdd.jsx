@@ -28,7 +28,7 @@ const WorkItemsOdd = ({item}) => {
     textAlign={'center'}>
       <Heading size='md' colorScheme='var(--title-color)'>{item.title}</Heading>
 
-      <Text py='2' colorScheme='var(--text-color)'>
+      <Text py='2' colorScheme='var(--text-color)' marginTop={'10px'}>
         {item.description}
       </Text>
     </CardBody>
