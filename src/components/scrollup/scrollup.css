@@ -42,11 +42,19 @@
     .show-scroll{
         bottom: 4rem;
     }
+
+    .scrollup:hover{
+        background-color: var(--title-color);
+    }
 }
 
 /* For small devices */
 @media screen and (max-width: 350px) {
     .scrollup{
         right: 1rem;
+    }
+
+    .scrollup:hover{
+        background-color: var(--title-color);
     }
 }

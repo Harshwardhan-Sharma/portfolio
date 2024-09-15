@@ -37,7 +37,6 @@
 .work__load-more:hover  {
     background-color: var(--title-color-dark);
     color: var(--container-color);
-
 }
 
 .work__show-less {
@@ -209,6 +208,16 @@
     .work__container {
         grid-template-columns: max-content;
     }
+
+    .work__load-more:hover{
+        background-color: var(--container-color);
+        color: var(--title-color);
+    }
+
+    .work__show-less:hover{
+        background-color: var(--container-color);
+        color: var(--title-color);
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -220,6 +229,16 @@
     .work__img {
         width: 100%;
     }
+
+    .work__load-more:hover{
+        background-color: var(--container-color);
+        color: var(--title-color);
+    }
+
+    .work__show-less:hover{
+        background-color: var(--container-color);
+        color: var(--title-color);
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -229,6 +248,16 @@
 
     .work__filters {
         column-gap: .25rem;
+    }
+    
+    .work__load-more:hover{
+        background-color: var(--container-color);
+        color: var(--title-color);
+    }
+
+    .work__show-less:hover{
+        background-color: var(--container-color);
+        color: var(--title-color);
     }
 }
 

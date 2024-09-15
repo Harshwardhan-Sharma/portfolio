@@ -170,6 +170,24 @@
     .home__scroll {
         display: none;
     }
+
+    .button:hover{
+        background-color: var(--title-color);
+    }
+    .home__social:hover{
+        color: var(--title-color);
+    }
+}
+
+
+/* For small devices */
+@media screen and (max-width: 576px) {
+    .button:hover{
+        background-color: var(--title-color);
+    }
+    .home__social-icon:hover{
+        color: var(--title-color);
+    }
 }
 
 
@@ -182,6 +200,12 @@
     .home__hand {
         width: 22px;
         height: 22px;
+    }
+    .button:hover{
+        background-color: var(--title-color);
+    }
+    .home__social-icon:hover{
+        color: var(--title-color);
     }
 }
 

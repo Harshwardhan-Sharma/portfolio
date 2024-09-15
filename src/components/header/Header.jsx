@@ -19,7 +19,7 @@ const Header = () => {
         const getThreshold = () => {
           if (window.innerWidth > 1024) {
             // For large screens (e.g., desktops), use a lower threshold for earlier detection
-            return 0.3; // 30% of section is visible
+            return 0.2; // 30% of section is visible
           } else if (window.innerWidth > 768) {
             // For medium screens (e.g., tablets)
             return 0.15;

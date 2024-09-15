@@ -65,4 +65,26 @@
     }
 }
 
+/* For medium devices */
+@media screen and (max-width: 768px) {
+    .footer__link:hover{
+        color: var(--title-color);
+    }
+
+    .footer__social-link:hover{
+        background-color: var(--title-color);
+    }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+    .footer__link:hover{
+        color: var(--title-color);
+    }
+
+    .footer__social-link:hover{
+        background-color: var(--title-color);
+    }
+}
+
 
