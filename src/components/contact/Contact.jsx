@@ -108,7 +108,7 @@ const Contact = () => {
             <div className="contact__form-div contact__form-area">
               <label className="contact__form-tag">Message</label>
               <textarea name="message" cols="30" rows="10" className='contact__form-input'
-              placeholder='Write your message' id='myMessageInput'></textarea>
+              placeholder='How May I Help You' id='myMessageInput'></textarea>
             </div>
 
             <button className="button button--flex">
