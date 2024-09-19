@@ -30,7 +30,7 @@ export const projectsData = [
       id: 1,
       image: finansync,
       title: "FINANSYNC🪙",
-      description: "FinanSync is a finance app that simplifies personal money management. It helps users track expenses, set budgets, manage savings goals, and sync multiple accounts for a complete financial overview. ",
+      description: "FinanSync is a finance app that simplifies personal money management. It helps users track expenses, set budgets, manage savings goals, and sync multiple accounts for a complete financial overview.Also share the real-time data of your investments and return in any field. ",
       category: "web",
       link : "https://github.com/Harshwardhan-Sharma/FINANSYNC",
     },
@@ -48,7 +48,7 @@ export const projectsData = [
       title: "SOCIALPULSE🌊",
       description: "Social Pulse connects people through shared interests and real-time updates with customizable feeds, multimedia sharing, and strong privacy. Join a community that values authenticity, explore trends, and engage in meaningful conversations.",
       category: "web",
-      link:"https://linkedin.com",
+      link:"https://github.com/Harshwardhan-Sharma/SOCIALPULSE",
     },
     {
       id: 4,
